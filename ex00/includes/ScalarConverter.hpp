@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 20:43:48 by codespace         #+#    #+#             */
-/*   Updated: 2026/10/05 19:07:27 by codespace        ###   ########.fr       */
+/*   Updated: 2026/10/08 13:50:57 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class ScalarConverter {
 };
 
 eType	getType(const std::string &str);
-void	doConvertion(std::string str, eType type);
+void	doConvert(std::string str, eType type);
 
 
 #endif
