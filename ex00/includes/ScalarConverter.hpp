@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: maleca <maleca@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 20:43:48 by codespace         #+#    #+#             */
-/*   Updated: 2026/10/08 13:50:57 by codespace        ###   ########.fr       */
+/*   Updated: 2026/10/08 17:28:25 by maleca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ class ScalarConverter {
 
 eType	getType(const std::string &str);
 void	doConvert(std::string str, eType type);
+void	doCharConvert(std::string str,eType type);
+void	doIntConvert(std::string str,eType type);
+void	doFloatConvert(std::string str,eType type);
+void	doDoubleConvert(std::string str,eType type);
 
 
 #endif

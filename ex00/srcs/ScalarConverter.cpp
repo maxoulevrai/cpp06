@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: maleca <maleca@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 00:20:21 by codespace         #+#    #+#             */
-/*   Updated: 2026/10/08 13:50:50 by codespace        ###   ########.fr       */
+/*   Updated: 2026/10/08 17:13:06 by maleca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ ScalarConverter &ScalarConverter::operator=(const ScalarConverter &other) {
 }
 
 ScalarConverter::~ScalarConverter() { }
-
-
 
 static const void convert(const std::string &str) {
 	eType type = getType(str);
