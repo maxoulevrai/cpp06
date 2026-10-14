@@ -3,21 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maleca <maleca@student.42.fr>              +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 20:43:48 by codespace         #+#    #+#             */
-/*   Updated: 2026/10/08 17:28:25 by maleca           ###   ########.fr       */
+/*   Updated: 2026/10/11 00:47:10 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCALARCONVERTER_HPP
 #define SCALARCONVERTER_HPP
 
-#include <string>
+#include <cctype>
+#include <cerrno>
+#include <climits>
+#include <cstdlib>
 #include <iostream>
+#include <iomanip>
+#include <limits>
+#include <string>
 
-
-enum eType {
+enum eType
+{
 	CHAR = 0,
 	INT = 1,
 	FLOAT = 2,
@@ -26,22 +32,19 @@ enum eType {
 	UNKNOWN = 5
 };
 
-class ScalarConverter {
-	private:
-		ScalarConverter();
-		ScalarConverter(const ScalarConverter &other);
-		ScalarConverter &operator=(const ScalarConverter &other);
-		~ScalarConverter();
-	public:
-		static const void convert(const std::string &str);
+class ScalarConverter
+{
+private:
+	ScalarConverter();
+	ScalarConverter(const ScalarConverter &other);
+	ScalarConverter &operator=(const ScalarConverter &other);
+	~ScalarConverter();
+
+public:
+	static void convert(const std::string &str);
 };
 
-eType	getType(const std::string &str);
-void	doConvert(std::string str, eType type);
-void	doCharConvert(std::string str,eType type);
-void	doIntConvert(std::string str,eType type);
-void	doFloatConvert(std::string str,eType type);
-void	doDoubleConvert(std::string str,eType type);
-
+eType getType(const std::string &str);
+void doConvert(const std::string &str, eType type);
 
 #endif

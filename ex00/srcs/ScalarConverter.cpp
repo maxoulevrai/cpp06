@@ -3,32 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maleca <maleca@student.42.fr>              +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 00:20:21 by codespace         #+#    #+#             */
-/*   Updated: 2026/10/08 17:13:06 by maleca           ###   ########.fr       */
+/*   Updated: 2026/10/10 23:22:23 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
-ScalarConverter::ScalarConverter() { }
+ScalarConverter::ScalarConverter() {}
 
-ScalarConverter::ScalarConverter(const ScalarConverter &other) {
+ScalarConverter::ScalarConverter(const ScalarConverter &other)
+{
 	*this = other;
 }
-ScalarConverter &ScalarConverter::operator=(const ScalarConverter &other) {
+ScalarConverter &ScalarConverter::operator=(const ScalarConverter &other)
+{
 	(void)other;
 	return *this;
 }
 
-ScalarConverter::~ScalarConverter() { }
+ScalarConverter::~ScalarConverter() {}
 
-static const void convert(const std::string &str) {
+void ScalarConverter::convert(const std::string &str)
+{
 	eType type = getType(str);
-	if (type == UNKNOWN) {
-		std::cout << "type non pris en charge : " << str[0] << std::endl;
-		return ;
+	if (type == UNKNOWN)
+	{
+		std::cout << "char: impossible\nint: impossible\n"
+			<< "float: impossible\ndouble: impossible" << std::endl;
+		return;
 	}
 	doConvert(str, type);
 }
