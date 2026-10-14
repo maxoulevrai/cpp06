@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: maleca <maleca@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 20:43:48 by codespace         #+#    #+#             */
-/*   Updated: 2026/10/11 00:47:10 by codespace        ###   ########.fr       */
+/*   Updated: 2026/10/14 18:09:07 by maleca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,15 @@ enum eType
 	UNKNOWN = 5
 };
 
-class ScalarConverter
-{
-private:
-	ScalarConverter();
-	ScalarConverter(const ScalarConverter &other);
-	ScalarConverter &operator=(const ScalarConverter &other);
-	~ScalarConverter();
+class ScalarConverter {
+	private:
+		ScalarConverter();
+		ScalarConverter(const ScalarConverter &other);
+		ScalarConverter &operator=(const ScalarConverter &other);
+		~ScalarConverter();
 
-public:
-	static void convert(const std::string &str);
+	public:
+		static void convert(const std::string &str);
 };
 
 eType getType(const std::string &str);
